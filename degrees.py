@@ -118,15 +118,11 @@ def shortest_path(source, target):
                 # Check to see if the node matches the state and take next steps
                 if child.state == target:
                     node = child
-                    actions = []
-                    cells = []
+                    solution = []
                     while node.parent is not None:
-                        actions.append(node.action)
-                        cells.append(node.state)
+                        solution.append((node.action,node.state))
                         node = node.parent
-                    actions.reverse()
-                    cells.reverse()
-                    solution = (actions,cells)
+                    solution.reverse()
                     return solution
                 frontier.add(child)
 
