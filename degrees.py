@@ -127,7 +127,7 @@ def shortest_path(source, target):
                     actions.reverse()
                     cells.reverse()
                     solution = (actions,cells)
-                    return
+                    return solution
                 frontier.add(child)
 
 
